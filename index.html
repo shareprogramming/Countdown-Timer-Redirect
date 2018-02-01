@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<title>Countdown Timer Redirect</title>
+</head>
+<body>
+ <center>Countdown Timer Redirect by @shareprogramming
+	<h1><div id="countdown"></div></h1></center>
+    
+ <script>
+ function counter(time, url){
+	var interval = setInterval(function(){
+		$('#countdown').text(time);
+		time = time - 1;
+ 
+		if(time == 0){
+			clearInterval(interval);
+			window.location = url;
+		}
+	}, 1000);
+}
+ 
+$(document).ready(function(){
+	counter(5, 'https://steemit.com/@shareprogramming');
+});
+ </script>
+	
+ 
+</body>
+</html>
